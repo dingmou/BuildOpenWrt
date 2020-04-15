@@ -1,1 +1,1 @@
-# Auto BuildOpenWrt
+# Auto Build OpenWrt
