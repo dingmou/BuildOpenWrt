@@ -35,18 +35,18 @@ jobs:
     steps:
     - name: Clone addtional source code
       run: |
-	mkdir openwrt        
-	cd openwrt 
+        mkdir openwrt        
+        cd openwrt 
         git clone https://github.com/Lienol/openwrt-package package/lienol
-
+         
     - name: Checkout
       uses: actions/checkout@master
-
+             
     - name: List all
       run: |
         ls -la
         pwd
-
+            
     - name: Copy files to package director
       run: |
         cp -r package/. openwrt/package/lean
