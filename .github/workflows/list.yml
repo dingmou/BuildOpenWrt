@@ -33,6 +33,14 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@master
+             
+    - name: List all
+      run: |
+        ls -la
+        pwd
+
     - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
@@ -42,18 +50,11 @@ jobs:
         git clone https://github.com/Lienol/openwrt-package package/lienol
         ls -la
         pwd
- 
-    - name: Checkout
-      uses: actions/checkout@master
-             
-    - name: List all
-      run: |
-        ls -la
-        pwd
+  
             
     - name: Copy files to package director
       run: |
-        cp -r package/. ../openwrt/package
+        cp -r package/. ./openwrt/package
 
     - name: List all again
       run: |
