@@ -60,7 +60,7 @@ jobs:
     - name: Clone addtional source code
       run: |
         cd openwrt 
-        cp -r package/dd/. ./openwrt/package/lean/luci-app-ssr-plus
+        cp -r package/dd/. ./openwrt/package/lean/luci-app-ddr-plus
         git clone https://github.com/Lienol/openwrt-package package/lienol
         
     - name: Update feeds
