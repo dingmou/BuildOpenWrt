@@ -41,6 +41,7 @@ jobs:
         cd openwrt 
         git clone https://github.com/Lienol/openwrt-package package/lienol
         ls -la
+        pwd
  
     - name: Checkout
       uses: actions/checkout@master
@@ -52,7 +53,7 @@ jobs:
             
     - name: Copy files to package director
       run: |
-        cp -r package/. openwrt/package
+        cp -r package/. ../openwrt/package
 
     - name: List all again
       run: |
