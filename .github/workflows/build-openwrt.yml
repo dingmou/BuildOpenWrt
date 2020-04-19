@@ -60,6 +60,7 @@ jobs:
     - name: Clone addtional source code
       run: |
         cp -r package/dd/. ./openwrt/package/lean/luci-app-ssr-plus
+        cp -r package/luci-app-dd/. ./openwrt/package/lean/luci-app-passwall
         cd openwrt 
         git clone https://github.com/Lienol/openwrt-package package/lienol
         
